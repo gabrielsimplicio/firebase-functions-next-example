@@ -12,10 +12,10 @@ const Header = ({ pathname }) => (
       style={{ lineHeight: '64px' }}
     >
       <Menu.Item key="1">
-        <Link prefetch href='/'>Home</Link>
+        <Link prefetch href='/'><a>Home</a></Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link prefetch href='/sobre'>Sobre</Link>
+        <Link prefetch href='/sobre'><a>Sobre</a></Link>
       </Menu.Item>
     </Menu>
   </Layout.Header>
