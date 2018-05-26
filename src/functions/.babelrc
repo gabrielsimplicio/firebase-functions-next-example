@@ -6,7 +6,25 @@
         "targets": {
           "node": "6.11.5"
         }
+      },
+      "next/babel"
+    ]
+  ],
+  "plugins": [
+    [
+      "styled-jsx/babel",
+      {
+        "optimizeForSpeed": true
+      }
+    ],
+    [
+      "inline-import",
+      {
+        "extensions": [
+          ".css"
+        ]
       }
     ]
-  ]
+  ],
+  "ignore": []
 }

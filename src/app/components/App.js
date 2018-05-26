@@ -1,11 +1,37 @@
-import React from "react"
-import Header from "./Header"
+import React from 'react'
+import Header from './Header'
+
+import { Layout, Breadcrumb } from 'antd';
+const { Content } = Layout;
+
+import stylesheet from 'antd/dist/antd.min.css'
 
 const App = ({ children }) => (
-  <main>
+  <Layout>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+    <style jsx>{`
+        #components-layout-demo-top-side-2 .logo {
+          width: 120px;
+          height: 31px;
+          background: #333;
+          border-radius: 6px;
+          margin: 16px 28px 16px 0;
+          float: left;
+        }
+      `}</style>
+
     <Header />
-    {children}
-  </main>
+    <Layout style={{ padding: '0 24px 24px' }}>
+      <Breadcrumb style={{ margin: '12px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+      <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
+        {children}
+      </Content>
+    </Layout>
+  </Layout>
 )
 
 export default App

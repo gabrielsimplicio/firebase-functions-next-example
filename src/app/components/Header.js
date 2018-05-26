@@ -1,13 +1,24 @@
-import React from "react"
-import Link from "next/link"
+import * as React from 'react';
+import Link from 'next/link';
 
-export default ({ pathname }) => (
-  <header>
-    <Link href="/">
-      <a className={pathname === "/" ? "is-active" : ""}>Home</a>
-    </Link>{" "}
-    <Link href="/about">
-      <a className={pathname === "/about" ? "is-active" : ""}>About</a>
-    </Link>
-  </header>
+import { Layout, Menu } from 'antd';
+
+const Header = ({ pathname }) => (
+  <Layout.Header className="header">
+    <div className="logo" />
+    <Menu
+      theme="dark"
+      mode="horizontal"
+      style={{ lineHeight: '64px' }}
+    >
+      <Menu.Item key="1">
+        <Link prefetch href='/'>Home</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link prefetch href='/sobre'>Sobre</Link>
+      </Menu.Item>
+    </Menu>
+  </Layout.Header>
 )
+
+export default Header

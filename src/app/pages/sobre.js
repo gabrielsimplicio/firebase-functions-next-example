@@ -3,6 +3,6 @@ import App from "../components/App"
 
 export default () => (
   <App>
-    <p>About Page</p>
+    Sobre a Empresa
   </App>
 )
